@@ -4,7 +4,7 @@
 #include <sys/ioctl.h>
 #include <linux/ion.h>
 #include "ion_sprd.h"
-#include "errno.h"
+
 enum
 {
         /* OEM specific HAL formats */
@@ -16,15 +16,11 @@ enum
 
 enum
 {
-	GRALLOC_USAGE_SPRD_PRIVATE	= 0x01000000,
-	GRALLOC_USAGE_OVERLAY_BUFFER	= 0x03000000,
-	GRALLOC_USAGE_VIDEO_BUFFER	= 0x05000000,
-	GRALLOC_USAGE_CAMERA_BUFFER 	= 0x05000000,
-	GRALLOC_USAGE_HW_TILE_ALIGN	= 0x08000000,
+	GRALLOC_USAGE_SPRD_PRIVATE		=  0x01000000,
+	GRALLOC_USAGE_OVERLAY_BUFFER		=  0x03000000,
+	GRALLOC_USAGE_VIDEO_BUFFER		=  0x05000000,
+	GRALLOC_USAGE_CAMERA_BUFFER 		=  0x05000000,
 };
-
-#define FB_ACTIVATE_NODISP 4 
-
 #ifdef __cplusplus
 extern "C" {
 #endif

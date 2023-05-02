@@ -23,7 +23,6 @@
 #include <cutils/atomic.h>
 #include <hardware/hardware.h>
 #include <hardware/gralloc.h>
-#include <linux/ion.h>
 
 #include "gralloc_priv.h"
 #include "alloc_device.h"
@@ -431,7 +430,8 @@ static int gralloc_unlock(gralloc_module_t const* module, buffer_handle_t handle
 
 static struct hw_module_methods_t gralloc_module_methods =
 {
-	.open = gralloc_device_open
+open:
+	gralloc_device_open
 };
 
 private_module_t::private_module_t()
